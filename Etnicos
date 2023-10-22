@@ -1,0 +1,30 @@
+import matplotlib.pyplot as plt
+
+# Datos
+tasa_mortalidad_awá = 28.3
+tasa_mortalidad_nacional = 19.6
+tasa_alfabetización_awá = 62.2
+tasa_alfabetización_nacional = 57.8
+prevalencia_desnutrición_crónica_awá = 24.4
+prevalencia_desnutrición_crónica_nacional = 15.5
+
+# Gráfico de la tasa de mortalidad infantil
+plt.plot(["Awá", "Nacional"], [tasa_mortalidad_awá, tasa_mortalidad_nacional],
+          color="black", marker="o", linestyle="-")
+plt.xlabel("Grupo poblacional")
+plt.ylabel("Tasa de mortalidad infantil (por cada 1.000 nacidos vivos)")
+plt.savefig("tasa_mortalidad_infantil.png")
+
+# Gráfico de la tasa de alfabetización
+plt.plot(["Awá", "Nacional"], [tasa_alfabetización_awá, tasa_alfabetización_nacional],
+          color="black", marker="o", linestyle="-")
+plt.xlabel("Grupo poblacional")
+plt.ylabel("Tasa de alfabetización (%)")
+plt.savefig("tasa_alfabetización.png")
+
+# Gráfico de la prevalencia de la desnutrición crónica
+plt.plot(["Awá", "Nacional"], [prevalencia_desnutrición_crónica_awá, prevalencia_desnutrición_crónica_nacional],
+          color="black", marker="o", linestyle="-")
+plt.xlabel("Grupo poblacional")
+plt.ylabel("Prevalencia de la desnutrición crónica (%)")
+plt.savefig("prevalencia_desnutrición_crónica.png")
